@@ -1,13 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lupicia Tea - Premium Tea Collection</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
+  <header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
     
-    <p> Welcome to my first web page!</p>
+    <div class="logo">
+      <a href="index.html">LUPICIA TEA</a>
+    </div>
+    
+    <div class="cart-icon">
+      <a href="cart.html">
+        Cart <span id="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Premium Tea Collection</h1>
+        <p>Discover our carefully curated selection of the finest teas from around the world.</p>
+        <a href="products.html" class="btn">Shop Now</a>
+      </div>
+      <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1531551622092-4bca6a0f3bf0?q=80&w=3011&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </div>
+    </section>
+
+    <section class="featured-categories">
+      <div class="container">
+        <h2>Collections</h2>
+        <div class="category-grid">
+          <a href="products.html?category=black" class="category-card">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=2670&auto=format&fit=crop" alt="Black Tea Collection">
+            <h3>Black Tea</h3>
+          </a>
+          <a href="products.html?category=green" class="category-card">
+            <img src="https://images.unsplash.com/photo-1564890369478-c  class="category-card">
+            <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?q=80&w=2670&auto=format&fit=crop" alt="Green Tea Collection">
+            <h3>Green Tea</h3>
+          </a>
+          <a href="products.html?category=oolong" class="category-card">
+            <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=2670&auto=format&fit=crop" alt="Oolong Tea Collection">
+            <h3>Oolong Tea</h3>
+          </a>
+          <a href="products.html?category=herbal" class="category-card">
+            <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=2670&auto=format&fit=crop" alt="Herbal Tea Collection">
+            <h3>Herbal Tea</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-ethos">
+      <div class="container">
+        <div class="ethos-content">
+          <div class="ethos-text">
+            <h2>Our Ethos</h2>
+            <p>At Lupicia, we believe that tea is more than just a beverage—it's a moment of tranquility in our busy lives, a connection to ancient traditions, and a celebration of nature's finest offerings.</p>
+            <div class="ethos-values">
+              <div class="ethos-value">
+                <h3>Exceptional Quality</h3>
+                <p>We source only the finest tea leaves from sustainable gardens around the world, ensuring each cup delivers an extraordinary experience.</p>
+              </div>
+              <div class="ethos-value">
+                <h3>Artisanal Approach</h3>
+                <p>Our master tea blenders craft each blend with precision and care, honoring traditional methods while embracing innovative techniques.</p>
+              </div>
+              <div class="ethos-value">
+                <h3>Sustainable Practices</h3>
+                <p>We're committed to ethical sourcing and environmentally friendly practices, from garden to cup, ensuring a positive impact on our planet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <div class="container">
+        <h2>Bestselling Teas</h2>
+        <div class="product-grid" id="featured-products">
+          <!-- Products will be loaded dynamically via JavaScript -->
+        </div>
+        <div class="view-all">
+          <a href="products.html" class="btn">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sustainability-section">
+      <div class="sustainability-image" style="background-image: url('https://images.unsplash.com/photo-1519094420848-e55445f0d59e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </div>
+      <div class="sustainability-content">
+        <h2>We Exist to Nurture</h2>
+        <p>At Lupicia, we have a number of certifications that reflect our passion for environmental protection. These include our partnership with organizations committed to sustainability and ethical sourcing.</p>
+        <p>We believe it is our responsibility to reduce our negative impact on the environment. There are a number of small operational choices we make each day that guide us towards having the very least amount of negative impact on the environment as possible.</p>
+        <a href="#" class="btn">Learn more</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Join Our Tea Community</h2>
+          <p>Subscribe to receive updates on new arrivals, special offers, and brewing tips.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="products.html?category=black">Black Tea</a></li>
+            <li><a href="products.html?category=green">Green Tea</a></li>
+            <li><a href="products.html?category=oolong">Oolong Tea</a></li>
+            <li><a href="products.html?category=herbal">Herbal Tea</a></li>
+            <li><a href="products.html">All Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Information</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Brewing Guides</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <address>
+            <p>123 Tea Garden Lane</p>
+            <p>Sydney, NSW 2000</p>
+            <p>Australia</p>
+            <p><a href="mailto:info@lupicia.com">info@lupicia.com</a></p>
+            <p><a href="tel:+61212345678">+61 2 1234 5678</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lupicia Tea. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
