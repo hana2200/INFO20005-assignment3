@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Tea Collection - Lupicia Tea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://placehold.co/180x60" alt="Lupicia Tea Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon">
+        <a href="cart.html">
+          <img src="https://placehold.co/24x24" alt="Cart">
+          <span id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="products-header">
+        <h1>Tea Collection</h1>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search for teas...">
+          <button id="search-button">Search</button>
+        </div>
+      </div>
+
+      <div class="products-layout">
+        <aside class="filters">
+          <h3>Categories</h3>
+          <ul class="filter-list">
+            <li>
+              <label>
+                <input type="checkbox" name="category" value="all" checked> All Teas
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="category" value="black"> Black Tea
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="category" value="green"> Green Tea
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="category" value="oolong"> Oolong Tea
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="category" value="herbal"> Herbal Tea
+              </label>
+            </li>
+          </ul>
+          <button id="clear-filters">Clear Filters</button>
+        </aside>
+
+        <div class="products-container">
+          <div class="product-grid" id="products-grid">
+            <!-- Products will be loaded dynamically via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="products.html?category=black">Black Tea</a></li>
+            <li><a href="products.html?category=green">Green Tea</a></li>
+            <li><a href="products.html?category=oolong">Oolong Tea</a></li>
+            <li><a href="products.html?category=herbal">Herbal Tea</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: info@lupicia.com</p>
+          <p>Phone: +61 2 1234 5678</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Lupicia Tea. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
