@@ -5,51 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Confirmation - Lupicia Tea</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="announcement-bar">
+    <p>Enjoy complimentary shipping on orders above $65 and samples with every order*</p>
+  </div>
+
   <header>
     <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="https://placehold.co/180x60" alt="Lupicia Tea Logo">
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="cart-icon">
-        <a href="cart.html">
-          <img src="https://placehold.co/24x24" alt="Cart">
-          <span id="cart-count">0</span>
-        </a>
+      <div class="header-inner">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        
+        <div class="logo">
+          <a href="index.html">LUPICIA TEA</a>
+        </div>
+        
+        <div class="header-actions">
+          <a href="#" class="header-action">Search</a>
+          <a href="#" class="header-action">Account</a>
+          <a href="cart.html" class="header-action">Cart <span id="cart-count">0</span></a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <div class="confirmation">
-        <div class="confirmation-icon">
-          <img src="https://placehold.co/64x64" alt="Success">
-        </div>
-        <h1>Thank You for Your Order!</h1>
-        <p>Your order has been placed successfully. You will receive a confirmation email shortly.</p>
-        
-        <div class="order-details">
-          <h2>Order Details</h2>
-          <div class="order-info">
-            <p><strong>Order Number:</strong> <span id="order-number"></span></p>
-            <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+      <div class="confirmation-page">
+        <div class="confirmation">
+          <div class="confirmation-icon">
+            <img src="https://placehold.co/64x64?text=✓" alt="Success">
           </div>
-        </div>
+          <h1>Thank You for Your Order!</h1>
+          <p>Your order has been placed successfully. You will receive a confirmation email shortly.</p>
+          
+          <div class="order-details">
+            <h2>Order Details</h2>
+            <div class="order-info">
+              <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+              <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+            </div>
+          </div>
 
-        <div class="confirmation-actions">
-          <a href="index.html" class="btn">Continue Shopping</a>
+          <div class="confirmation-actions">
+            <a href="index.html" class="btn">Continue Shopping</a>
+          </div>
         </div>
       </div>
     </div>
@@ -68,9 +75,23 @@
           </ul>
         </div>
         <div class="footer-column">
+          <h3>Information</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Brewing Guides</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
           <h3>Contact</h3>
-          <p>Email: info@lupicia.com</p>
-          <p>Phone: +61 2 1234 5678</p>
+          <address>
+            <p>123 Tea Garden Lane</p>
+            <p>Sydney, NSW 2000</p>
+            <p>Australia</p>
+            <p><a href="mailto:info@lupicia.com">info@lupicia.com</a></p>
+            <p><a href="tel:+61212345678">+61 2 1234 5678</a></p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">

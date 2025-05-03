@@ -3,80 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Tea Collection - Lupicia Tea</title>
+  <title>Tea Collection - Lupicia Tea</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="announcement-bar">
+    <p>Enjoy complimentary shipping on orders above $65 and samples with every order*</p>
+  </div>
+
   <header>
     <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="https://placehold.co/180x60" alt="Lupicia Tea Logo">
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="active">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="cart-icon">
-        <a href="cart.html">
-          <img src="https://placehold.co/24x24" alt="Cart">
-          <span id="cart-count">0</span>
-        </a>
+      <div class="header-inner">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Tea</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Gifting</a></li>
+          </ul>
+        </nav>
+        
+        <div class="logo">
+          <a href="index.html">LUPICIA TEA</a>
+        </div>
+        
+        <div class="header-actions">
+          <a href="#" class="header-action">Search</a>
+          <a href="#" class="header-action">Account</a>
+          <a href="cart.html" class="header-action">Cart <span id="cart-count">0</span></a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <div class="container">
-      <div class="products-header">
+    <div class="collection-header">
+      <div class="container">
         <h1>Tea Collection</h1>
-        <div class="search-bar">
-          <input type="text" id="search-input" placeholder="Search for teas...">
-          <button id="search-button">Search</button>
-        </div>
       </div>
+    </div>
 
-      <div class="products-layout">
-        <aside class="filters">
-          <h3>Categories</h3>
-          <ul class="filter-list">
-            <li>
-              <label>
-                <input type="checkbox" name="category" value="all" checked> All Teas
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="category" value="black"> Black Tea
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="category" value="green"> Green Tea
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="category" value="oolong"> Oolong Tea
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="category" value="herbal"> Herbal Tea
-              </label>
-            </li>
-          </ul>
-          <button id="clear-filters">Clear Filters</button>
-        </aside>
+    <div class="container">
+      <div class="collection-grid" id="products-grid">
+        <!-- Products will be loaded dynamically via JavaScript -->
+      </div>
+    </div>
 
-        <div class="products-container">
-          <div class="product-grid" id="products-grid">
-            <!-- Products will be loaded dynamically via JavaScript -->
+    <div class="certifications">
+      <div class="container">
+        <div class="certification-icons">
+          <div class="certification-icon">
+            <img src="https://placehold.co/80x80?text=Organic" alt="Certified Organic">
+          </div>
+          <div class="certification-icon">
+            <img src="https://placehold.co/80x80?text=Fair+Trade" alt="Fairly Traded">
+          </div>
+          <div class="certification-icon">
+            <img src="https://placehold.co/80x80?text=Naturopathic" alt="Naturopathically Designed">
+          </div>
+          <div class="certification-icon">
+            <img src="https://placehold.co/80x80?text=Australian" alt="Hand Crafted in Australia">
+          </div>
+          <div class="certification-icon">
+            <img src="https://placehold.co/80x80?text=Eco" alt="Biodegradable Packaging">
           </div>
         </div>
       </div>
@@ -96,9 +86,23 @@
           </ul>
         </div>
         <div class="footer-column">
+          <h3>Information</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Brewing Guides</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
           <h3>Contact</h3>
-          <p>Email: info@lupicia.com</p>
-          <p>Phone: +61 2 1234 5678</p>
+          <address>
+            <p>123 Tea Garden Lane</p>
+            <p>Sydney, NSW 2000</p>
+            <p>Australia</p>
+            <p><a href="mailto:info@lupicia.com">info@lupicia.com</a></p>
+            <p><a href="tel:+61212345678">+61 2 1234 5678</a></p>
+          </address>
         </div>
       </div>
       <div class="footer-bottom">
