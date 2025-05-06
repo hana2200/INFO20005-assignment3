@@ -5,7 +5,7 @@ const products = [
       name: "Sencha Green Tea",
       category: "Green Tea",
       price: 15.99,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cfGUMpTYyiHg1fhDL0B5UkYp6CyePu.png",
       description:
         "A classic Japanese green tea with a refreshing flavor. This premium tea is steamed to preserve its natural essence, resulting in a bright, grassy taste with subtle sweet notes.",
       origin: "Japan",
@@ -14,8 +14,8 @@ const products = [
       id: 2,
       name: "Earl Grey Black Tea",
       category: "Black Tea",
-      price: 12.5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      price: 14.99,
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ttOKpPTQboJCmyCBCCt574T0QkZgX1.png",
       description:
         "A fragrant black tea infused with bergamot oil. Our Earl Grey features premium Ceylon black tea with the perfect balance of citrusy bergamot, creating a sophisticated and uplifting cup.",
       origin: "India",
@@ -24,8 +24,9 @@ const products = [
       id: 3,
       name: "Chamomile Herbal Tea",
       category: "Herbal Tea",
-      price: 10.0,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      price: 14.99,
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview%20%282%29-e90TLCS1Ku7TnpUA0KLQZvkTuqZQVo.png",
       description:
         "A soothing herbal tea made from chamomile flowers. This caffeine-free infusion offers a gentle, apple-like sweetness and is renowned for its calming properties, perfect for evening relaxation.",
       origin: "Egypt",
@@ -34,8 +35,9 @@ const products = [
       id: 4,
       name: "Oolong Tea",
       category: "Oolong Tea",
-      price: 18.75,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      price: 15.99,
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview%20%283%29-YIwhjSJDsZaPr4Zbsw0oSWsZy3oxDJ.png",
       description:
         "A traditional Chinese tea with a unique aroma and taste. Our premium oolong is partially oxidized, creating a complex flavor profile that balances the freshness of green tea with the richness of black tea.",
       origin: "China",
@@ -45,7 +47,7 @@ const products = [
       name: "Matcha Green Tea",
       category: "Green Tea",
       price: 22.0,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cfGUMpTYyiHg1fhDL0B5UkYp6CyePu.png",
       description:
         "A finely ground powder of green tea leaves, perfect for lattes and smoothies. Our ceremonial grade matcha is stone-ground from shade-grown tea leaves, offering a vibrant green color and rich umami flavor.",
       origin: "Japan",
@@ -55,7 +57,7 @@ const products = [
       name: "English Breakfast Black Tea",
       category: "Black Tea",
       price: 11.25,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cfGUMpTYyiHg1fhDL0B5UkYp6CyePu.png",
       description:
         "A robust and full-bodied black tea, ideal for starting the day. Our English Breakfast blend combines premium Assam and Ceylon teas, creating a rich, malty flavor that pairs perfectly with milk.",
       origin: "India",
@@ -65,7 +67,8 @@ const products = [
       name: "Peppermint Herbal Tea",
       category: "Herbal Tea",
       price: 9.5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-removebg-preview%20%282%29-e90TLCS1Ku7TnpUA0KLQZvkTuqZQVo.png",
       description:
         "A refreshing herbal tea with a cool and minty flavor. Made from pure peppermint leaves, this caffeine-free infusion offers an invigorating taste and aroma that soothes the digestive system.",
       origin: "USA",
@@ -75,7 +78,7 @@ const products = [
       name: "Jasmine Green Tea",
       category: "Green Tea",
       price: 16.5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v6kqXoYwSFhjmvuflfGfCWZIzzNLJ0.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cfGUMpTYyiHg1fhDL0B5UkYp6CyePu.png",
       description:
         "Green tea scented with jasmine flowers, creating a delicate and aromatic blend. Our jasmine tea is crafted by layering green tea leaves with fresh jasmine blossoms, allowing the tea to naturally absorb the floral essence.",
       origin: "China",
@@ -87,6 +90,15 @@ const products = [
     // Update cart count
     updateCartCount()
   
+    // Set up mobile menu
+    setupMobileMenu()
+  
+    // Set up product tabs if on product detail page
+    setupProductTabs()
+  
+    // Set up product filters if on products page
+    setupProductFilters()
+  
     // Check which page we're on and run appropriate functions
     const currentPage = window.location.pathname
   
@@ -96,6 +108,7 @@ const products = [
       loadAllProducts()
     } else if (currentPage.includes("product-detail.html")) {
       loadProductDetail()
+      loadRelatedProducts()
     } else if (currentPage.includes("cart.html")) {
       loadCart()
     } else if (currentPage.includes("checkout.html")) {
@@ -106,15 +119,87 @@ const products = [
     }
   })
   
+  // Set up product tabs
+  function setupProductTabs() {
+    const tabButtons = document.querySelectorAll(".tab-button")
+    if (!tabButtons.length) return
+  
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons and content
+        document.querySelectorAll(".tab-button").forEach((btn) => btn.classList.remove("active"))
+        document.querySelectorAll(".tab-content").forEach((content) => content.classList.remove("active"))
+  
+        // Add active class to clicked button and corresponding content
+        button.classList.add("active")
+        const tabId = button.getAttribute("data-tab")
+        document.getElementById(`${tabId}-tab`).classList.add("active")
+      })
+    })
+  }
+  
+  // Set up product filters
+  function setupProductFilters() {
+    const filterButtons = document.querySelectorAll(".filter-button")
+    if (!filterButtons.length) return
+  
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        document.querySelectorAll(".filter-button").forEach((btn) => btn.classList.remove("active"))
+  
+        // Add active class to clicked button
+        button.classList.add("active")
+  
+        // Filter products
+        const category = button.getAttribute("data-category")
+        if (category === "all") {
+          loadAllProducts()
+        } else {
+          loadAllProducts(category)
+        }
+      })
+    })
+  }
+  
+  // Set up mobile menu
+  function setupMobileMenu() {
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle")
+    const mobileMenu = document.querySelector(".mobile-menu")
+    const mobileMenuClose = document.querySelector(".mobile-menu-close")
+  
+    if (!mobileMenuToggle || !mobileMenu || !mobileMenuClose) return
+  
+    mobileMenuToggle.addEventListener("click", () => {
+      mobileMenu.classList.add("active")
+      document.body.style.overflow = "hidden"
+    })
+  
+    mobileMenuClose.addEventListener("click", () => {
+      mobileMenu.classList.remove("active")
+      document.body.style.overflow = ""
+    })
+  
+    // Update mobile cart count
+    const mobileCartCount = document.getElementById("cart-count-mobile")
+    if (mobileCartCount) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || []
+      const itemCount = cart.reduce((total, item) => total + item.quantity, 0)
+      mobileCartCount.textContent = itemCount
+    }
+  }
+  
   // Update cart count in header
   function updateCartCount() {
-    const cartCountElement = document.getElementById("cart-count")
-    if (!cartCountElement) return
+    const cartCountElements = document.querySelectorAll("#cart-count, #cart-count-mobile")
+    if (!cartCountElements.length) return
   
     const cart = JSON.parse(localStorage.getItem("cart")) || []
     const itemCount = cart.reduce((total, item) => total + item.quantity, 0)
   
-    cartCountElement.textContent = itemCount
+    cartCountElements.forEach((element) => {
+      element.textContent = itemCount
+    })
   }
   
   // Load featured products on home page
@@ -131,11 +216,13 @@ const products = [
       productsHTML += `
       <div class="product-card">
         <a href="product-detail.html?id=${product.id}">
-          <img src="${product.image}" alt="${product.name}">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
         </a>
         <div class="product-info">
           <h3><a href="product-detail.html?id=${product.id}">${product.name}</a></h3>
-          <div class="product-price">from $${product.price.toFixed(2)}</div>
+          <div class="product-price">$${product.price.toFixed(2)}</div>
         </div>
       </div>
     `
@@ -170,7 +257,9 @@ const products = [
       productsHTML += `
       <div class="product-card">
         <a href="product-detail.html?id=${product.id}">
-          <img src="${product.image}" alt="${product.name}">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
         </a>
         <div class="product-info">
           <h3><a href="product-detail.html?id=${product.id}">${product.name}</a></h3>
@@ -181,6 +270,45 @@ const products = [
     })
   
     productsGrid.innerHTML = productsHTML
+  }
+  
+  // Load related products
+  function loadRelatedProducts() {
+    const relatedProductsContainer = document.getElementById("related-products")
+    if (!relatedProductsContainer) return
+  
+    // Get current product ID from URL
+    const urlParams = new URLSearchParams(window.location.search)
+    const productId = Number.parseInt(urlParams.get("id"))
+  
+    // Find current product
+    const currentProduct = products.find((p) => p.id === productId)
+    if (!currentProduct) return
+  
+    // Get products in the same category
+    const relatedProducts = products
+      .filter((p) => p.category === currentProduct.category && p.id !== productId)
+      .slice(0, 3)
+  
+    let productsHTML = ""
+  
+    relatedProducts.forEach((product) => {
+      productsHTML += `
+      <div class="product-card">
+        <a href="product-detail.html?id=${product.id}">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+          </div>
+        </a>
+        <div class="product-info">
+          <h3><a href="product-detail.html?id=${product.id}">${product.name}</a></h3>
+          <div class="product-price">$${product.price.toFixed(2)}</div>
+        </div>
+      </div>
+    `
+    })
+  
+    relatedProductsContainer.innerHTML = productsHTML
   }
   
   // Load product detail page
@@ -250,11 +378,11 @@ const products = [
             <button class="quantity-btn" id="increase-quantity">+</button>
           </div>
           
-          <button class="btn add-to-cart-btn" id="add-to-cart-btn">Add to Cart</button>
+          <button class="btn" id="add-to-cart-btn">Add to Cart</button>
         </div>
       </div>
     </div>
-  `
+    `
   
     // Set up option buttons
     const sizeButtons = document.querySelectorAll("#size-options .option-button")
@@ -369,20 +497,7 @@ const products = [
     emptyCart.style.display = "none"
     cartActions.style.display = "flex"
   
-    let cartHTML = `
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-  `
-  
+    let cartHTML = ""
     let subtotal = 0
   
     cart.forEach((item, index) => {
@@ -390,36 +505,29 @@ const products = [
       subtotal += itemTotal
   
       cartHTML += `
-      <tr>
-        <td>
-          <div class="cart-product">
-            <img src="${item.image}" alt="${item.name}">
-            <div>
-              <h3>${item.name}</h3>
-              <p>Size: ${item.size} | Package: ${item.packaging}</p>
-            </div>
-          </div>
-        </td>
-        <td>$${item.price.toFixed(2)}</td>
-        <td>
-          <div class="quantity-selector">
-            <button class="quantity-btn" onclick="updateCartItemQuantity(${index}, -1)">-</button>
+      <div class="cart-item">
+        <div class="cart-item-image">
+          <img src="${item.image}" alt="${item.name}">
+        </div>
+        <div class="cart-item-info">
+          <h3>${item.name}</h3>
+          <p>Size: ${item.size} | Package: ${item.packaging}</p>
+        </div>
+        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+        <div class="cart-item-quantity">
+          <div class="cart-quantity">
+            <button onclick="updateCartItemQuantity(${index}, -1)">-</button>
             <input type="number" value="${item.quantity}" min="1" onchange="updateCartItemQuantityDirect(${index}, this.value)">
-            <button class="quantity-btn" onclick="updateCartItemQuantity(${index}, 1)">+</button>
+            <button onclick="updateCartItemQuantity(${index}, 1)">+</button>
           </div>
-        </td>
-        <td>$${itemTotal.toFixed(2)}</td>
-        <td>
-          <button onclick="removeCartItem(${index})" class="remove-btn">Remove</button>
-        </td>
-      </tr>
-    `
+        </div>
+        <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
+        <button onclick="removeCartItem(${index})" class="remove-btn">Remove</button>
+      </div>
+      `
     })
   
     cartHTML += `
-      </tbody>
-    </table>
-    
     <div class="cart-summary">
       <div class="summary-row">
         <span>Subtotal</span>
@@ -438,7 +546,7 @@ const products = [
         <span>$${(subtotal + (subtotal < 50 ? 5.99 : 0) + subtotal * 0.1).toFixed(2)}</span>
       </div>
     </div>
-  `
+    `
   
     cartContainer.innerHTML = cartHTML
   }
@@ -569,7 +677,7 @@ const products = [
       <span>Total</span>
       <span>$${total.toFixed(2)}</span>
     </div>
-  `
+    `
   
     summaryTotalsContainer.innerHTML = summaryHTML
   }
