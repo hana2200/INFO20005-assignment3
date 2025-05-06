@@ -154,12 +154,20 @@ header {
 
 .logo a {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   font-family: var(--font-heading);
   font-size: 1.2rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-text);
+}
+
+.logo a span {
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  margin-top: 2px;
 }
 
 .main-nav ul {
@@ -171,12 +179,12 @@ header {
 }
 
 .main-nav ul li a {
-  font-size: 0.75rem;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-transform: capitalize;
   letter-spacing: 0.05em;
   position: relative;
   font-weight: 400;
-  font-family: var(--font-subheading);
+  font-family: var(--font-heading);
 }
 
 .main-nav ul li a:after {
@@ -243,7 +251,7 @@ header {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: var(--color-background);
 }
 
@@ -252,17 +260,22 @@ header {
   flex-direction: column;
   justify-content: center;
   padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 500px;
 }
 
 .hero-content h1 {
   font-weight: 400;
   margin-bottom: var(--spacing-md);
+  font-size: 2.8rem;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .hero-content p {
   margin-bottom: var(--spacing-lg);
   max-width: 400px;
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 .hero-image {
@@ -614,6 +627,88 @@ footer {
   opacity: 0.7;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 14px;
+  position: relative;
+  z-index: 101;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text);
+  position: absolute;
+  left: 0;
+  transition: var(--transition);
+}
+
+.mobile-menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.mobile-menu-toggle span:nth-child(2) {
+  top: 6px;
+}
+
+.mobile-menu-toggle span:nth-child(3) {
+  top: 12px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  z-index: 100;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu-nav ul li {
+  margin: var(--spacing-sm) 0;
+}
+
+.mobile-menu-nav ul li a {
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .product-grid {
@@ -623,9 +718,22 @@ footer {
 }
 
 @media (max-width: 992px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-content {
+    order: 1;
+    padding: var(--spacing-lg);
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    min-height: 50vh;
+    order: 2;
   }
 
   .collections-grid {
@@ -638,27 +746,23 @@ footer {
   }
 
   .sustainability-image {
-    min-height: 300px;
+    min-height: 50vh;
     order: 2;
   }
 
   .sustainability-content {
     order: 1;
     padding: var(--spacing-lg);
+    align-items: center;
+    text-align: center;
   }
 
-  .hero {
-    grid-template-columns: 1fr;
+  .sustainability-content h2 {
+    text-align: center;
   }
 
-  .hero-content {
-    order: 2;
-    padding: var(--spacing-lg);
-  }
-
-  .hero-image {
-    min-height: 300px;
-    order: 1;
+  .sustainability-content .btn {
+    align-self: center;
   }
 
   .ethos-values {
@@ -673,63 +777,250 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Mobile Header */
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .logo a span {
+    font-size: 0.5rem;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .header-action {
+    margin-left: 0;
+  }
+
+  /* Mobile Hero */
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    white-space: normal;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .hero-content .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Collections */
+  .collections {
+    padding: 2.5rem 0;
+  }
+
+  .collections h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
+    gap: 1rem;
+  }
+
+  .collection-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .collection-info p {
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Ethos */
+  .ethos {
+    padding: 2.5rem 0;
+  }
+
+  .ethos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ethos-intro {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
 
   .ethos-values {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: 1.5rem;
+  }
+
+  .ethos-value h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ethos-value p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Mobile Bestselling */
+  .bestselling {
+    padding: 2.5rem 0;
+  }
+
+  .bestselling h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .product-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .product-price {
+    font-size: 0.75rem;
+  }
+
+  .view-all {
+    margin-top: 1.5rem;
+  }
+
+  .view-all .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Sustainability */
+  .sustainability-content {
+    padding: 2rem 1rem;
+  }
+
+  .sustainability-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sustainability-content p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .sustainability-content .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Newsletter */
+  .newsletter {
+    padding: 2.5rem 0;
+  }
+
+  .newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .newsletter-form {
     flex-direction: column;
-    width: 100%;
   }
 
   .newsletter-form input {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.75rem;
+    padding: 10px;
+    font-size: 0.8rem;
     border-right: 1px solid var(--color-border);
-    width: 100%;
   }
 
   .newsletter-form .btn {
     width: 100%;
+    padding: 10px;
+    font-size: 0.7rem;
     border-left: 1px solid var(--color-text);
+  }
+
+  /* Mobile Footer */
+  footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-column h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+    padding-top: 1rem;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-nav ul li a {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 576px) {
   .collections-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-sm);
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: 1rem;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .hero-content p {
-    font-size: 0.9rem;
-  }
-
-  .sustainability-content {
-    padding: var(--spacing-md);
+    font-size: 0.8rem;
   }
 
   .sustainability-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 

@@ -162,7 +162,7 @@ const products = [
     })
   }
   
-  // Set up mobile menu
+  // Enhance mobile menu functionality
   function setupMobileMenu() {
     const mobileMenuToggle = document.querySelector(".mobile-menu-toggle")
     const mobileMenu = document.querySelector(".mobile-menu")
@@ -180,13 +180,14 @@ const products = [
       document.body.style.overflow = ""
     })
   
-    // Update mobile cart count
-    const mobileCartCount = document.getElementById("cart-count-mobile")
-    if (mobileCartCount) {
-      const cart = JSON.parse(localStorage.getItem("cart")) || []
-      const itemCount = cart.reduce((total, item) => total + item.quantity, 0)
-      mobileCartCount.textContent = itemCount
-    }
+    // Close menu when clicking on a link
+    const mobileMenuLinks = document.querySelectorAll(".mobile-menu-nav a")
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active")
+        document.body.style.overflow = ""
+      })
+    })
   }
   
   // Update cart count in header
