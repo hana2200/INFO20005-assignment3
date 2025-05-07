@@ -87,36 +87,11 @@ const products = [
   
   // Run when the DOM is fully loaded
   document.addEventListener("DOMContentLoaded", () => {
-    // Update cart count
-    updateCartCount()
-  
     // Set up mobile menu
     setupMobileMenu()
   
-    // Set up product tabs if on product detail page
-    setupProductTabs()
-  
-    // Set up product filters if on products page
+    // Set up product filters
     setupProductFilters()
-  
-    // Check which page we're on and run appropriate functions
-    const currentPage = window.location.pathname
-  
-    if (currentPage.includes("index.html") || currentPage === "/" || currentPage.endsWith("/")) {
-      loadFeaturedProducts()
-    } else if (currentPage.includes("products.html")) {
-      loadAllProducts()
-    } else if (currentPage.includes("product-detail.html")) {
-      loadProductDetail()
-      loadRelatedProducts()
-    } else if (currentPage.includes("cart.html")) {
-      loadCart()
-    } else if (currentPage.includes("checkout.html")) {
-      loadCheckout()
-      setupCheckoutForm()
-    } else if (currentPage.includes("confirmation.html")) {
-      showOrderConfirmation()
-    }
   })
   
   // Set up product tabs
@@ -134,30 +109,6 @@ const products = [
         button.classList.add("active")
         const tabId = button.getAttribute("data-tab")
         document.getElementById(`${tabId}-tab`).classList.add("active")
-      })
-    })
-  }
-  
-  // Set up product filters
-  function setupProductFilters() {
-    const filterButtons = document.querySelectorAll(".filter-button")
-    if (!filterButtons.length) return
-  
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Remove active class from all buttons
-        document.querySelectorAll(".filter-button").forEach((btn) => btn.classList.remove("active"))
-  
-        // Add active class to clicked button
-        button.classList.add("active")
-  
-        // Filter products
-        const category = button.getAttribute("data-category")
-        if (category === "all") {
-          loadAllProducts()
-        } else {
-          loadAllProducts(category)
-        }
       })
     })
   }
@@ -188,6 +139,49 @@ const products = [
         document.body.style.overflow = ""
       })
     })
+  }
+  
+  // Set up product filters
+  function setupProductFilters() {
+    const filterButtons = document.querySelectorAll(".filter-button")
+    if (!filterButtons.length) return
+  
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        document.querySelectorAll(".filter-button").forEach((btn) => btn.classList.remove("active"))
+  
+        // Add active class to clicked button
+        button.classList.add("active")
+  
+        // Filter products based on category
+        const category = button.getAttribute("data-category")
+        filterTeaProducts(category)
+      })
+    })
+  }
+  
+  // Filter tea products based on category
+  function filterTeaProducts(category) {
+    const teaCards = document.querySelectorAll(".tea-card")
+  
+    if (category === "all") {
+      // Show all products
+      teaCards.forEach((card) => {
+        card.style.display = "flex"
+      })
+    } else {
+      // Filter products by category
+      teaCards.forEach((card) => {
+        const productCategory = card.getAttribute("data-category") || ""
+  
+        if (productCategory === category) {
+          card.style.display = "flex"
+        } else {
+          card.style.display = "none"
+        }
+      })
+    }
   }
   
   // Update cart count in header

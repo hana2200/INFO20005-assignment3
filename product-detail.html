@@ -1,92 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details - Lupicia Tea</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details - Lupicia Tea</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="announcement-bar">
-    <p>Enjoy complimentary shipping on orders above $65 and samples with every order*</p>
+<div class="announcement-bar">
+  <p>Enjoy complimentary shipping on orders above $65 and samples with every order*</p>
+</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <button class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Shop</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      
+      <div class="logo">
+        <a href="index.html">LUPICIA TEA</a>
+      </div>
+      
+      <div class="header-actions">
+        <a href="#" class="header-action">Search</a>
+        <a href="#" class="header-action">Account</a>
+        <a href="cart.html" class="header-action">Cart <span id="cart-count">0</span></a>
+      </div>
+    </div>
   </div>
+</header>
 
-  <header>
-    <div class="container">
-      <div class="header-inner">
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html" class="active">Shop</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </nav>
+<main>
+  <div class="container">
+    <div class="product-breadcrumbs">
+      <a href="index.html">Home</a> &gt; <a href="products.html">Shop</a> &gt; <span id="product-name">Product Name</span>
+    </div>
+
+    <div class="product-detail" id="product-detail">
+      <!-- Product details will be loaded dynamically via JavaScript -->
+    </div>
+    
+    <div class="product-additional">
+      <div class="product-tabs">
+        <button class="tab-button active" data-tab="brewing">Brewing Instructions</button>
+        <button class="tab-button" data-tab="ingredients">Ingredients</button>
+        <button class="tab-button" data-tab="reviews">Reviews</button>
+      </div>
+      
+      <div class="tab-content active" id="brewing-tab">
+        <h3>How to Brew</h3>
+        <div class="brewing-instructions">
+          <div class="brewing-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Water Temperature</h4>
+              <p>Heat fresh water to 80°C (175°F) for green tea. For black tea, bring water to a full boil (100°C/212°F).</p>
+            </div>
+          </div>
+          
+          <div class="brewing-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Measure Tea</h4>
+              <p>Use 1 teaspoon (2g) of tea leaves per 8oz (240ml) cup. Adjust to taste.</p>
+            </div>
+          </div>
+          
+          <div class="brewing-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Steep Time</h4>
+              <p>Steep for 2-3 minutes. Avoid over-steeping to prevent bitterness.</p>
+            </div>
+          </div>
+          
+          <div class="brewing-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Enjoy</h4>
+              <p>Remove tea leaves and enjoy your perfectly brewed cup of tea.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="ingredients-tab">
+        <h3>Ingredients</h3>
+        <p>100% pure tea leaves. No additives or artificial flavors.</p>
+        <p>Our teas are sourced from sustainable farms and are certified organic.</p>
+      </div>
+      
+      <div class="tab-content" id="reviews-tab">
+        <h3>Customer Reviews</h3>
+        <div class="review">
+          <div class="review-header">
+            <div class="review-rating">★★★★★</div>
+            <div class="review-author">Sarah T.</div>
+          </div>
+          <p>Absolutely delicious tea with a wonderful aroma. It's become my daily morning ritual.</p>
+        </div>
         
-        <div class="logo">
-          <a href="index.html">LUPICIA TEA</a>
-        </div>
-        
-        <div class="header-actions">
-          <a href="#" class="header-action">Search</a>
-          <a href="#" class="header-action">Account</a>
-          <a href="cart.html" class="header-action">Cart <span id="cart-count">0</span></a>
+        <div class="review">
+          <div class="review-header">
+            <div class="review-rating">★★★★☆</div>
+            <div class="review-author">Michael P.</div>
+          </div>
+          <p>Great quality tea. The flavor is rich and complex. Would definitely recommend.</p>
         </div>
       </div>
     </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <div class="product-breadcrumbs">
-        <a href="index.html">Home</a> &gt; <a href="products.html">Shop</a> &gt; <span id="product-name">Product Name</span>
-      </div>
-
-      <div class="product-detail" id="product-detail">
-        <!-- Product details will be loaded dynamically via JavaScript -->
+    
+    <div class="related-products">
+      <h2>You May Also Like</h2>
+      <div class="product-grid" id="related-products">
+        <!-- Related products will be loaded dynamically via JavaScript -->
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Shop</h3>
-          <ul>
-            <li><a href="products.html?category=black">Black Tea</a></li>
-            <li><a href="products.html?category=green">Green Tea</a></li>
-            <li><a href="products.html?category=oolong">Oolong Tea</a></li>
-            <li><a href="products.html?category=herbal">Herbal Tea</a></li>
-          </ul>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-logo">
+          LUPICIA
+          <span>fresh tea australia</span>
         </div>
-        <div class="footer-column">
-          <h3>Information</h3>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Brewing Guides</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <address>
-            <p>123 Tea Garden Lane</p>
-            <p>Sydney, NSW 2000</p>
-            <p>Australia</p>
-            <p><a href="mailto:info@lupicia.com">info@lupicia.com</a></p>
-            <p><a href="tel:+61212345678">+61 2 1234 5678</a></p>
-          </address>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Lupicia Tea. All rights reserved.</p>
+      <div class="footer-column">
+        <h3>About Lupicia</h3>
+        <ul>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Support System</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+          <li><a href="#">Copyright Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Help & Support</h3>
+        <ul>
+          <li><a href="#">Orders & Shipping</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Join Up</h3>
+        <ul>
+          <li><a href="#">Lupicia Club</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Visit Us</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>© 2025 Lupicia Tea. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<div class="mobile-menu">
+  <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+  <nav class="mobile-menu-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Gifts</a></li>
+      <li><a href="#">Our Store</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
 
