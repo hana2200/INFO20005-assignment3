@@ -304,6 +304,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    align-items: center; /* Center align items vertically */
   }
   
   .product-image {
@@ -313,9 +314,10 @@
   }
   
   .product-image img {
-    max-width: 100%;
-    max-height: 500px;
+    max-width: 65%; /* Reduced from 100% to make the main product image smaller */
+    max-height: 350px; /* Reduced from 500px */
     object-fit: contain;
+    margin: 0 auto;
   }
   
   .product-info {
@@ -455,7 +457,7 @@
   
   /* Related Products */
   .related-products {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 6rem; /* Increased from var(--spacing-xl) to add more space */
   }
   
   .related-products h2 {
@@ -475,7 +477,7 @@
   
   .related-product img {
     width: 100%;
-    max-width: 250px;
+    max-width: 250px; /* Reverted back to original size */
     margin: 0 auto var(--spacing-sm);
     border-radius: 50%;
   }
@@ -631,44 +633,173 @@
       display: block;
     }
   
-    .related-products-grid {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-md);
+    /* Mobile product detail improvements */
+    .product-detail-container {
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .product-image {
+      padding: 1.5rem 0; /* Added padding to top and bottom for mobile */
+      background-color: var(--color-off-white); /* Light background to define the image area */
+      border-radius: 8px; /* Slightly rounded corners */
+      margin-bottom: 1rem; /* Space below the image container */
     }
   
     .product-image img {
-      max-height: 300px;
+      max-width: 55%; /* Further reduced for mobile */
+      max-height: 220px;
     }
   
     .product-info h1 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem; /* Increased from 0.5rem to create more space between title and description */
+      padding-bottom: 0.5rem; /* Added padding to create visual separation */
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
     }
   
+    .product-info p {
+      font-size: 0.8rem; 
+      line-height: 1.4; /* Slightly tighter line height */
+      margin-bottom: var(--spacing-sm);
+      color: #888888; /* Lighter text color for more elegance */
+      letter-spacing: 0.01em; /* Slight letter spacing for refinement */
+      padding-top: 0.3rem; /* Added a bit of top padding to increase the gap */
+    }
+  
+    .product-price {
+      font-size: 1rem;
+      margin: 0.5rem 0 1rem;
+    }
+  
+    .size-selector {
+      margin-bottom: 1rem;
+    }
+  
+    .size-selector label {
+      font-size: 0.85rem;
+    }
+  
+    .custom-select {
+      margin-bottom: 1rem;
+    }
+  
+    .custom-select select {
+      padding: 10px 12px;
+      font-size: 0.85rem;
+    }
+  
+    .add-to-cart-btn {
+      padding: 10px 12px;
+      font-size: 0.85rem;
+    }
+  
+    /* Mobile tabs */
     .tab-header {
-      padding: var(--spacing-sm);
+      padding: 0.75rem 1rem;
+    }
+  
+    .tab-header h3 {
+      font-size: 1rem;
     }
   
     .tab-content {
-      padding: 0 var(--spacing-sm) var(--spacing-sm);
+      padding: 0 1rem 1rem;
+    }
+  
+    .tab-content p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  
+    /* Mobile reviews */
+    .customer-reviews {
+      padding: 1rem;
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .customer-reviews h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .review {
+      margin-bottom: 1rem;
+    }
+  
+    .review p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  
+    /* Mobile related products */
+    .related-products {
+      margin-bottom: 3rem;
+    }
+  
+    .related-products h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .related-products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .related-product img {
+      max-width: 120px; /* Smaller images for mobile */
+      height: 120px;
+      object-fit: cover;
+    }
+  
+    .related-product h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+  
+    .related-product p {
+      font-size: 0.8rem;
     }
   }
   
   @media (max-width: 576px) {
     .breadcrumbs {
-      padding: var(--spacing-sm) 0;
-      font-size: 0.75rem;
+      padding: 0.75rem 0;
+      font-size: 0.7rem;
     }
   
     .product-info h1 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
+      margin-bottom: 1rem; 
+    }
+  
+    .product-info p {
+      font-size: 0.75rem; 
+      line-height: 1.35;
+      padding-top: 0.3rem; 
     }
   
     .product-price {
-      font-size: 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .related-products-grid {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 0.75rem;
     }
   
     .related-product img {
-      max-width: 180px;
+      max-width: 100px; 
+      height: 100px;
+    }
+  
+    .related-product h3 {
+      font-size: 0.8rem;
+    }
+  
+    .related-product p {
+      font-size: 0.75rem;
     }
   
     .footer-content {
