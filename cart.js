@@ -1,3 +1,4 @@
+// Wait for the DOM to be fully loaded before executing any code
 document.addEventListener("DOMContentLoaded", () => {
     // Set up mobile menu
     setupMobileMenu()
@@ -229,10 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = JSON.parse(localStorage.getItem("teaShopCart")) || []
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
   
+    // Update cart count in header if element exists
     const cartCountElement = document.querySelector(".cart-count")
     if (cartCountElement) {
       cartCountElement.textContent = cartCount
     }
   }
-  
   
