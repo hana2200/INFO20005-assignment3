@@ -222,6 +222,82 @@
     // Set up checkout form
     setupCheckoutForm();
   });
-</script>
+
+  function loadCheckout() {
+    const checkoutItemsContainer = document.getElementById("checkout-items");
+    const summaryTotals = document.getElementById("summary-totals");
+    // Use teaShopCart instead of cart to match the key used in cart.js
+    const cart = JSON.parse(localStorage.getItem("teaShopCart")) || [];
+
+    if (!checkoutItemsContainer || !summaryTotals || cart.length === 0) {
+      if (checkoutItemsContainer) {
+        checkoutItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      }
+      if (summaryTotals) {
+        summaryTotals.innerHTML = "";
+      }
+      return;
+    }
+
+    let itemsHTML = "";
+    let subtotal = 0;
+
+    cart.forEach(item => {
+      const itemTotal = item.price * item.quantity;
+      subtotal += itemTotal;
+      itemsHTML += `
+        <div class="checkout-item">
+          <div class="checkout-item-info">
+            <img src="${item.image}" alt="${item.title}">
+            <div>
+              <h4>${item.title}</h4>
+              <p>Size: ${item.size}</p>
+              <p>Quantity: ${item.quantity}</p>
+            </div>
+          </div>
+          <div class="checkout-item-total">$${itemTotal.toFixed(2)}</div>
+        </div>
+      `;
+    });
+
+    const tax = subtotal * 0.075;
+    const total = subtotal + tax;
+
+    checkoutItemsContainer.innerHTML = itemsHTML;
+    summaryTotals.innerHTML = `
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$${subtotal.toFixed(2)}</span>
+      </div>
+      <div class="summary-row">
+        <span>Tax</span>
+        <span>$${tax.toFixed(2)}</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>$${total.toFixed(2)}</span>
+      </div>
+    `;
+  }
+
+  function setupCheckoutForm() {
+    const form = document.getElementById("checkout-form");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Show a success message
+        alert("Thank you for your purchase! Your order has been placed.");
+
+        // Clear the cart - use teaShopCart instead of cart
+        localStorage.removeItem("teaShopCart");
+
+        // Redirect to home or a thank-you page
+        window.location.href = "confirmation.html";
+      });
+    }
+  }
+  </script>
 </body>
 </html>

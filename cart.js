@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartItemsContainer = document.getElementById("cart-items")
     const emptyCartMessage = document.getElementById("empty-cart")
     const cartGrid = document.querySelector(".cart-grid")
+    const cartActions = document.querySelector(".cart-actions")
   
     if (!cartItemsContainer || !emptyCartMessage || !cartGrid) return
   
@@ -53,12 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cart.length === 0) {
       cartGrid.style.display = "none"
       emptyCartMessage.style.display = "block"
+      if (cartActions) cartActions.style.display = "none"
       return
     }
   
     // Show cart grid and hide empty cart message
     cartGrid.style.display = "grid"
     emptyCartMessage.style.display = "none"
+    if (cartActions) cartActions.style.display = "flex"
   
     // Clear cart items container
     cartItemsContainer.innerHTML = ""
@@ -90,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="cart-item-details-grid">
               <div class="cart-item-price">
-                $${Number.parseFloat(item.price).toFixed(2)}
+                ${Number.parseFloat(item.price).toFixed(2)}
               </div>
               <div class="cart-item-quantity">
                 <div class="quantity-selector">
@@ -100,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
               </div>
               <div class="cart-item-total">
-                $${itemTotal.toFixed(2)}
+                ${itemTotal.toFixed(2)}
               </div>
             </div>
           </div>
@@ -118,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>Size: ${item.size}</p>
               </div>
             </div>
-            <div class="cart-item-price">$${Number.parseFloat(item.price).toFixed(2)}</div>
+            <div class="cart-item-price">${Number.parseFloat(item.price).toFixed(2)}</div>
             <div class="cart-item-quantity">
               <div class="quantity-selector">
                 <button class="quantity-btn decrease-btn" data-index="${index}">-</button>
@@ -126,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="quantity-btn increase-btn" data-index="${index}">+</button>
               </div>
             </div>
-            <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
+            <div class="cart-item-total">${itemTotal.toFixed(2)}</div>
             <button class="remove-item" data-index="${index}" aria-label="Remove item">×</button>
           </div>
         `
@@ -142,9 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Update summary values
     document.getElementById("item-count").textContent = cart.length
-    document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`
-    document.getElementById("tax").textContent = `$${tax.toFixed(2)}`
-    document.getElementById("total").textContent = `$${total.toFixed(2)}`
+    document.getElementById("subtotal").textContent = `${subtotal.toFixed(2)}`
+    document.getElementById("tax").textContent = `${tax.toFixed(2)}`
+    document.getElementById("total").textContent = `${total.toFixed(2)}`
   
     // Add event listeners to quantity buttons and remove buttons
     setupCartButtons()
@@ -236,4 +239,5 @@ document.addEventListener("DOMContentLoaded", () => {
       cartCountElement.textContent = cartCount
     }
   }
+  
   
