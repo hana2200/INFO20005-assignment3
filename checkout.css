@@ -1,3 +1,4 @@
+/* Checkout-specific styles */
 
 .checkout-page {
     padding: 4rem 0;
@@ -89,6 +90,7 @@
     margin-bottom: 2rem;
   }
   
+  /* Improved checkout item styling */
   .checkout-item {
     display: flex;
     margin-bottom: 2rem;
@@ -103,12 +105,12 @@
   }
   
   .checkout-item img {
-    width: 70px; 
+    width: 70px;
     height: 70px;
     border-radius: 50%;
-    margin-right: 1.5rem; /* Increased for better spacing */
-    object-fit: cover; /* Ensure images are properly displayed */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    margin-right: 1.5rem;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   
   .checkout-item-info {
@@ -135,9 +137,11 @@
     margin-top: 0.5rem;
   }
   
+  /* Improved summary totals styling */
   .summary-totals {
     padding-top: 2rem;
     border-top: 1px solid #e5e2dd;
+    margin-top: 2rem;
   }
   
   .summary-row {
@@ -167,6 +171,7 @@
   }
   
   @media (max-width: 768px) {
+    /* Mobile improvements for checkout page */
     .checkout-page {
       padding: 2.5rem 0; /* Reduced padding for mobile */
     }
@@ -182,6 +187,7 @@
       letter-spacing: 0.02em;
     }
   
+    /* More elegant form styling */
     .form-group {
       margin-bottom: 1.5rem; /* Reduced spacing */
     }
@@ -227,10 +233,11 @@
   
     .item-price {
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.5rem; /* Space between quantity and total */
       font-size: 0.8rem;
     }
   
+    /* More elegant summary section */
     .order-summary {
       padding: 1.5rem;
       margin-bottom: 2rem;
@@ -239,7 +246,7 @@
     .order-summary h2 {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-      text-align: center; 
+      text-align: center; /* Center the Order Summary title on mobile */
     }
   
     .summary-row {
@@ -251,6 +258,7 @@
       font-size: 1rem;
     }
   
+    /* More elegant button */
     .checkout-btn {
       padding: 10px 15px;
       font-size: 0.85rem;
@@ -264,7 +272,7 @@
     }
   
     .checkout-page h1 {
-      font-size: 1.3rem; 
+      font-size: 1.3rem; /* Even smaller heading for very small screens */
       margin-bottom: 1.5rem;
     }
   
@@ -274,23 +282,47 @@
     }
   
     .form-group {
-      margin-bottom: 1.2rem; 
+      margin-bottom: 1.2rem; /* Further reduced spacing */
     }
   
     .checkout-form h2 {
-      font-size: 1.1rem; 
+      font-size: 1.1rem; /* Smaller section headings */
       margin-bottom: 1.2rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
   
     .order-summary h2 {
-      text-align: center; 
+      text-align: center; /* Ensure Order Summary title is centered on very small screens too */
       font-size: 1.1rem;
     }
   
+    /* Mobile responsiveness for checkout items */
+    .checkout-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
     .checkout-item img {
-      width: 60px;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .checkout-item-info {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .item-price {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  
+    .checkout-item img {
+      width: 60px; /* Slightly smaller images */
       height: 60px;
     }
   
