@@ -123,8 +123,9 @@ p {
   color: var(--color-white);
   text-align: center;
   padding: var(--spacing-xs) 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem; /* Increased from 0.8rem */
   letter-spacing: 0.05em;
+  font-weight: 400; /* Added font weight for better readability */
 }
 
 .announcement-bar p {
@@ -185,7 +186,7 @@ header {
 }
 
 .main-nav ul li a {
-  font-size: 0.85rem;
+  font-size: 1rem; /* Increased from 0.85rem for better desktop readability */
   text-transform: capitalize;
   letter-spacing: 0.05em;
   position: relative;
@@ -390,16 +391,37 @@ header {
   margin: 0 auto;
 }
 
+.ethos-value {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.015);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ethos-value:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.02);
+}
+
+/* Make the text more elegant in the ethos section */
 .ethos-value h3 {
   margin-bottom: var(--spacing-sm);
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 300;
   text-align: center;
+  letter-spacing: 0.03em;
+  color: #5d6e5a;
 }
 
 .ethos-value p {
   font-size: 0.9rem;
   text-align: center;
+  line-height: 1.8;
+  color: rgba(85, 85, 85, 0.8);
+  font-weight: 300;
 }
 
 /* Bestselling Products */
@@ -748,44 +770,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Mobile header */
-  header {
-    background-color: var(--color-white, #ffffff);
-    padding: var(--spacing-sm, 1rem) 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--color-border, #e5e2dd);
-  }
-
-  .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    text-align: center;
-    flex-grow: 1;
-  }
-
-  .logo a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--font-heading, "Cormorant Garamond"), Georgia, serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-
-  .logo a span {
-    font-size: 0.6rem;
-    letter-spacing: 0.05em;
-    text-transform: lowercase;
-    margin-top: 2px;
-  }
-
+  /* Mobile Header */
   .main-nav {
     display: none;
   }
@@ -794,143 +779,99 @@ footer {
     display: block;
   }
 
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 100;
-    padding: 4rem;
+  .header-inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    padding: 0.5rem 0;
   }
 
-  .mobile-menu.active {
-    transform: translateX(0);
-    display: flex;
-  }
-
-  .mobile-menu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  .mobile-menu-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .mobile-menu-nav ul li {
-    margin: 1rem 0;
-  }
-
-  .mobile-menu-nav a {
+  .logo a {
     font-size: 1rem;
-    font-family: var(--font-heading, "Cormorant Garamond"), Georgia, serif;
   }
 
-  /* Mobile footer */
-  footer {
-    background-color: #9a9a8e;
-    color: white;
-    padding: 40px 20px 20px;
+  .logo a span {
+    font-size: 0.5rem;
   }
 
-  .footer-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .footer-logo {
-    font-family: var(--font-heading, "Cormorant Garamond"), Georgia, serif;
-    font-size: 28px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: white;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-
-  .footer-logo span {
-    display: block;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: lowercase;
-    margin-top: 5px;
-    opacity: 0.8;
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-
-  .footer-column h3 {
-    font-family: var(--font-heading, "Cormorant Garamond"), Georgia, serif;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-  }
-
-  .footer-column ul li {
-    margin-bottom: 12px;
-  }
-
-  .footer-column ul li a {
-    font-size: 14px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 12px;
-    opacity: 0.7;
+  /* Hide header actions (search and cart icons) ONLY on mobile */
+  .header-actions {
+    display: none !important;
   }
 }
 
 @media (max-width: 576px) {
-  .tea-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  /* Improved Mobile Ethos Section */
+  .ethos {
+    padding: 3rem 0;
+    background-color: #f5f4f0;
   }
 
-  .tea-hero-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .tea-hero-content p {
-    font-size: 0.8rem;
-  }
-
-  .traditional-tea h2 {
+  .ethos h2 {
     font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.03em;
+    position: relative;
+    padding-bottom: 0.8rem;
   }
 
-  .tea-intro {
+  .ethos h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .ethos-intro {
     font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    letter-spacing: 0.01em;
+  }
+
+  .ethos-values {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .ethos-value {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.015);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 90%;
+    margin: 0 auto;
+    aspect-ratio: 1 / 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ethos-value h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.6rem;
+  }
+
+  .ethos-value p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: rgba(85, 85, 85, 0.8);
+    font-weight: 300;
+    margin-bottom: 0;
   }
 }
 
@@ -1102,12 +1043,10 @@ footer {
 
   .ethos-value h3 {
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
   }
 
   .ethos-value p {
     font-size: 0.8rem;
-    line-height: 1.5;
   }
 
   /* Mobile Bestselling */
@@ -1154,8 +1093,6 @@ footer {
 
   .sustainability-content p {
     font-size: 0.8rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
   }
 
   .sustainability-content .btn {
@@ -1175,7 +1112,6 @@ footer {
 
   .newsletter p {
     font-size: 0.8rem;
-    margin-bottom: 1.5rem;
   }
 
   .newsletter-form {
@@ -1186,14 +1122,12 @@ footer {
     margin-bottom: 0.75rem;
     padding: 10px;
     font-size: 0.8rem;
-    border-right: 1px solid var(--color-border);
   }
 
   .newsletter-form .btn {
     width: 100%;
     padding: 10px;
     font-size: 0.7rem;
-    border-left: 1px solid var(--color-text);
   }
 
   /* Mobile Footer */
@@ -1208,7 +1142,6 @@ footer {
 
   .footer-column h3 {
     font-size: 0.8rem;
-    margin-bottom: 0.75rem;
   }
 
   .footer-column ul li a {
@@ -1217,7 +1150,6 @@ footer {
 
   .footer-bottom {
     font-size: 0.7rem;
-    padding-top: 1rem;
   }
 
   /* Mobile Menu */
@@ -1225,26 +1157,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-@media (max-width: 576px) {
-  .collections-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-grid {
-    gap: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero-content p {
-    font-size: 0.8rem;
-  }
-
-  .sustainability-content h2 {
-    font-size: 1.4rem;
-  }
-}
-
