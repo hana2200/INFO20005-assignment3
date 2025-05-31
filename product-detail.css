@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
     --color-off-white: #f9f9f9;
     --color-announcement: #c4c6bc;
     --color-footer-bg: #9a9a8e;
-    --color-image-bg: #f8f7f5; /* Added a very soft background color for the image container */
+    --color-image-bg: #f8f7f5; 
   
     --font-heading: "Cormorant Garamond", Georgia, serif;
     --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -230,10 +230,13 @@
     background-color: var(--color-accent-dark);
   }
   
-  /* Product Details Tabs */
+  /* Update the Product Details Tabs with elegant light khaki */
   .product-details-tabs {
     margin-bottom: var(--spacing-lg);
-    background-color: var(--color-off-white);
+    background-color: rgba(226, 223, 209, 0.4);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .tab-section {
@@ -242,19 +245,33 @@
   
   .tab-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
     cursor: pointer;
   }
   
+  .tab-header h3 {
+    font-size: 1.1rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    flex: 1;
+  }
+  
   .tab-toggle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .tab-content {
-    padding: 0 var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
     display: none;
+  }
+  
+  .tab-content p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-bottom: var(--spacing-sm);
   }
   
   .tab-content.active {
@@ -262,29 +279,56 @@
   }
   
   .ingredients-section h4 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: var(--spacing-xs);
-    font-weight: 500;
+    font-weight: 400;
+    color: #5d6e5a;
+    text-align: left;
   }
   
-  /* Customer Reviews */
+  .ingredients-section p {
+    text-align: left;
+  }
+  
   .customer-reviews {
     margin-bottom: var(--spacing-lg);
-    background-color: var(--color-off-white);
+    background-color: rgba(226, 223, 209, 0.4);
     padding: var(--spacing-md);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .customer-reviews h3 {
     margin-bottom: var(--spacing-md);
+    color: #5d6e5a;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 1.1rem;
+    text-align: left;
   }
   
   .review {
     margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .review p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  .review:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
   }
   
   .review-stars {
-    color: #f8d64e;
+    color: #c4b9a8;
     margin-bottom: var(--spacing-xs);
+    text-align: left;
   }
   
   /* Related Products */
@@ -473,7 +517,6 @@
       font-size: 0.7rem;
     }
   
-    /* Refined styling for very small screens */
     .product-image {
       padding: 2rem;
       border-radius: 10px;
@@ -491,9 +534,9 @@
     }
   
     .product-info p {
-      font-size: 0.75rem; /* Even smaller for very small screens */
+      font-size: 0.75rem;
       line-height: 1.35;
-      padding-top: 0.3rem; /* Maintain top padding on very small screens */
+      padding-top: 0.3rem; 
     }
   
     .product-price {
@@ -506,7 +549,7 @@
     }
   
     .related-product img {
-      max-width: 100px; /* Even smaller for very small screens */
+      max-width: 100px; 
       height: 100px;
     }
   
@@ -546,7 +589,6 @@
       margin-right: auto;
     }
   
-    /* Update desktop styling to remove any visible boundaries */
     .product-image {
       background-color: transparent;
       box-shadow: none;
@@ -662,6 +704,41 @@
   
     .breadcrumbs a:hover {
       color: var(--color-accent);
+    }
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .tab-header {
+      padding: 0.75rem 1rem;
+    }
+  
+    .tab-content {
+      padding: 1rem;
+    }
+  
+    .customer-reviews {
+      padding: 1rem;
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .tab-header h3 {
+      font-size: 0.95rem;
+    }
+  
+    .tab-content p,
+    .review p {
+      font-size: 0.85rem;
+    }
+  
+    .ingredients-section h4 {
+      font-size: 0.9rem;
+    }
+  
+    .customer-reviews h3 {
+      font-size: 0.95rem;
     }
   }
   
