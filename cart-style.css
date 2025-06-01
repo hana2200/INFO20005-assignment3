@@ -3,6 +3,7 @@
 /* Cart Page */
 .cart-page {
     padding: 4rem 0;
+    background-color: #ffffff;
   }
   
   .cart-page h1 {
@@ -22,7 +23,7 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
-    background-color: transparent;
+    background-color: #ffffff;
     border-radius: 0;
     box-shadow: none;
   }
@@ -166,7 +167,7 @@
     margin-top: 3rem; /* Consistent spacing between items and summary */
     padding: 2rem 0;
     border-top: none;
-    background-color: transparent;
+    background-color: #ffffff;
     border-radius: 0;
   }
   
@@ -229,6 +230,7 @@
   .empty-cart {
     text-align: center;
     padding: 4rem 0;
+    background-color: #ffffff;
   }
   
   .empty-cart p {
@@ -499,5 +501,4 @@
       padding: 15px 20px;
     }
   }
-  
   
