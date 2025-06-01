@@ -794,9 +794,35 @@ footer {
     font-size: 0.5rem;
   }
 
-  /* Hide header actions (search and cart icons) ONLY on mobile */
   .header-actions {
     display: none !important;
+  }
+
+  /* Mobile Hero */
+  .hero-content {
+    padding: 2.5rem 1.5rem; /* Increased padding for more elegant spacing */
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem; /* Reduced from 1.8rem for smaller heading */
+    white-space: normal;
+    margin-bottom: 1.2rem; /* Slightly increased spacing below heading */
+    letter-spacing: 0.03em; /* Added slight letter spacing for elegance */
+  }
+
+  .hero-content p {
+    font-size: 0.8rem; 
+    margin-bottom: 1.8rem; /* Increased spacing below paragraph */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 90%; /* Added max-width to center the text better */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content .btn {
+    padding: 10px 24px; /* Slightly increased padding for better button proportions */
+    font-size: 0.7rem;
+    margin-top: 0.5rem; /* Added small top margin for spacing */
   }
 }
 
@@ -872,6 +898,22 @@ footer {
     color: rgba(85, 85, 85, 0.8);
     font-weight: 300;
     margin-bottom: 0;
+  }
+
+  .hero-content {
+    padding: 3rem 1.2rem; 
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; 
+    margin-bottom: 1.3rem; 
+  }
+
+  .hero-content p {
+    font-size: 0.75rem; 
+    line-height: 1.5;
+    margin-bottom: 2rem; 
+    max-width: 85%; 
   }
 }
 
@@ -977,24 +1019,29 @@ footer {
 
   /* Mobile Hero */
   .hero-content {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem; 
     white-space: normal;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem; 
+    letter-spacing: 0.03em; 
   }
 
   .hero-content p {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+    font-size: 0.8rem; 
+    margin-bottom: 1.8rem; 
+    line-height: 1.6;
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-content .btn {
-    padding: 8px 20px;
+    padding: 10px 24px; 
     font-size: 0.7rem;
+    margin-top: 0.5rem; 
   }
 
   /* Mobile Collections */
@@ -1155,5 +1202,23 @@ footer {
   /* Mobile Menu */
   .mobile-menu-nav ul li a {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    padding: 3rem 1.2rem; 
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; 
+    margin-bottom: 1.3rem; 
+  }
+
+  .hero-content p {
+    font-size: 0.75rem; 
+    line-height: 1.5;
+    margin-bottom: 2rem; 
+    max-width: 85%; 
   }
 }
