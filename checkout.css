@@ -2,6 +2,7 @@
 
 .checkout-page {
     padding: 4rem 0;
+    background-color: #ffffff;
   }
   
   .checkout-page h1 {
@@ -74,10 +75,10 @@
   }
   
   .order-summary {
-    background-color: #f9f9f8; /* Lighter background for better contrast */
-    padding: 2rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
   }
   
   .order-summary h2 {
@@ -90,7 +91,7 @@
     margin-bottom: 2rem;
   }
   
-  /* Improved checkout item styling */
+  /* Improved checkout item styling with larger images and text */
   .checkout-item {
     display: flex;
     margin-bottom: 2rem;
@@ -105,8 +106,8 @@
   }
   
   .checkout-item img {
-    width: 70px;
-    height: 70px;
+    width: 90px; /* Increased from 70px */
+    height: 90px; /* Increased from 70px */
     border-radius: 50%;
     margin-right: 1.5rem;
     object-fit: cover;
@@ -118,14 +119,14 @@
   }
   
   .checkout-item-info h3 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased from 1rem */
     margin-bottom: 0.5rem;
     font-family: var(--font-heading);
     font-weight: 400;
   }
   
   .checkout-item-info p {
-    font-size: 0.85rem;
+    font-size: 0.95rem; /* Increased from 0.85rem */
     color: #777;
     margin-bottom: 0.5rem;
   }
@@ -133,11 +134,11 @@
   .item-price {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 0.95rem; /* Increased from 0.85rem */
     margin-top: 0.5rem;
   }
   
-  /* Improved summary totals styling */
+  /* Improved summary totals styling with larger text */
   .summary-totals {
     padding-top: 2rem;
     border-top: 1px solid #e5e2dd;
@@ -148,12 +149,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased from 0.9rem */
   }
   
   .summary-row.total {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Increased from 1.1rem */
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #e5e2dd;
@@ -216,6 +217,8 @@
     .checkout-item img {
       margin-right: 0;
       margin-bottom: 1rem;
+      width: 80px; /* Slightly reduced for mobile but still larger than before */
+      height: 80px;
     }
   
     .checkout-item-info {
@@ -224,22 +227,22 @@
     }
   
     .checkout-item-info h3 {
-      font-size: 0.95rem;
+      font-size: 1rem; /* Increased from 0.95rem */
     }
   
     .checkout-item-info p {
-      font-size: 0.8rem;
+      font-size: 0.9rem; /* Increased from 0.8rem */
     }
   
     .item-price {
       justify-content: center;
       gap: 1.5rem; /* Space between quantity and total */
-      font-size: 0.8rem;
+      font-size: 0.9rem; /* Increased from 0.8rem */
     }
   
     /* More elegant summary section */
     .order-summary {
-      padding: 1.5rem;
+      padding: 0;
       margin-bottom: 2rem;
     }
   
@@ -250,12 +253,12 @@
     }
   
     .summary-row {
-      font-size: 0.85rem;
+      font-size: 0.95rem; /* Increased from 0.85rem */
       margin-bottom: 8px;
     }
   
     .summary-row.total {
-      font-size: 1rem;
+      font-size: 1.1rem; /* Increased from 1rem */
     }
   
     /* More elegant button */
@@ -309,6 +312,8 @@
     .checkout-item img {
       margin-right: 0;
       margin-bottom: 1rem;
+      width: 70px; /* Slightly smaller for very small screens but still larger than before */
+      height: 70px;
     }
   
     .checkout-item-info {
@@ -321,33 +326,28 @@
       gap: 1.5rem;
     }
   
-    .checkout-item img {
-      width: 60px; /* Slightly smaller images */
-      height: 60px;
-    }
-  
     .checkout-item-info h3 {
-      font-size: 0.9rem;
+      font-size: 0.95rem; /* Increased from 0.9rem */
     }
   
     .checkout-item-info p {
-      font-size: 0.75rem;
+      font-size: 0.85rem; /* Increased from 0.75rem */
     }
   
     .item-price {
-      font-size: 0.75rem;
+      font-size: 0.85rem; /* Increased from 0.75rem */
     }
   
     .order-summary {
-      padding: 1.2rem;
+      padding: 0;
     }
   
     .summary-row {
-      font-size: 0.8rem;
+      font-size: 0.9rem; /* Increased from 0.8rem */
     }
   
     .summary-row.total {
-      font-size: 0.95rem;
+      font-size: 1.05rem; /* Increased from 0.95rem */
     }
   }
   
