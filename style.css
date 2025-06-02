@@ -794,6 +794,7 @@ footer {
     font-size: 0.5rem;
   }
 
+  /* Hide header actions (search and cart icons) ONLY on mobile */
   .header-actions {
     display: none !important;
   }
@@ -811,7 +812,7 @@ footer {
   }
 
   .hero-content p {
-    font-size: 0.8rem; 
+    font-size: 0.8rem; /* Reduced from 0.85rem for smaller paragraph */
     margin-bottom: 1.8rem; /* Increased spacing below paragraph */
     line-height: 1.6; /* Improved line height for readability */
     max-width: 90%; /* Added max-width to center the text better */
@@ -824,96 +825,90 @@ footer {
     font-size: 0.7rem;
     margin-top: 0.5rem; /* Added small top margin for spacing */
   }
+
+  /* Mobile Ethos */
+  .ethos {
+    padding: 2.5rem 0;
+  }
+
+  .ethos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ethos-intro {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .ethos-values {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ethos-value {
+    padding: 1.2rem 1.8rem;
+    max-width: 92%;
+    aspect-ratio: 1 / 0.6; /* Make it more horizontal/square than vertical */
+    margin: 0 auto;
+  }
+
+  .ethos-value h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem; /* Reduced space between heading and paragraph */
+  }
+
+  .ethos-value p {
+    font-size: 0.75rem; /* Made paragraph text smaller */
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 576px) {
   /* Improved Mobile Ethos Section */
   .ethos {
-    padding: 3rem 0;
-    background-color: #f5f4f0;
-  }
-
-  .ethos h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.03em;
-    position: relative;
-    padding-bottom: 0.8rem;
-  }
-
-  .ethos h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .ethos-intro {
-    font-size: 0.8rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #666;
-    letter-spacing: 0.01em;
+    padding: 2.8rem 0;
   }
 
   .ethos-values {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
+    gap: 1.2rem;
+    padding: 0 0.8rem;
   }
 
   .ethos-value {
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 1.2rem 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.015);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    max-width: 90%;
-    margin: 0 auto;
-    aspect-ratio: 1 / 0.8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 1.1rem 1.6rem;
+    border-radius: 8px;
+    max-width: 94%;
+    aspect-ratio: 1 / 0.55; /* Even more horizontal for smallest screens */
   }
 
   .ethos-value h3 {
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
   }
 
   .ethos-value p {
-    font-size: 0.75rem;
-    line-height: 1.6;
-    color: rgba(85, 85, 85, 0.8);
-    font-weight: 300;
-    margin-bottom: 0;
+    font-size: 0.7rem; /* Even smaller text for smallest screens */
+    line-height: 1.4;
   }
 
+  /* Further refinements for very small screens */
   .hero-content {
-    padding: 3rem 1.2rem; 
+    padding: 3rem 1.2rem; /* Further increased vertical padding for more space */
   }
 
   .hero-content h1 {
-    font-size: 1.5rem; 
-    margin-bottom: 1.3rem; 
+    font-size: 1.5rem; /* Further reduced for very small screens */
+    margin-bottom: 1.3rem; /* Increased spacing below heading */
   }
 
   .hero-content p {
-    font-size: 0.75rem; 
+    font-size: 0.75rem; /* Further reduced for very small screens */
     line-height: 1.5;
-    margin-bottom: 2rem; 
-    max-width: 85%; 
+    margin-bottom: 2rem; /* Increased spacing below paragraph */
+    max-width: 85%; /* Slightly reduced max-width for better proportions */
   }
 }
 
@@ -1019,29 +1014,29 @@ footer {
 
   /* Mobile Hero */
   .hero-content {
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 1.5rem; /* Increased padding for more elegant spacing */
   }
 
   .hero-content h1 {
-    font-size: 1.6rem; 
+    font-size: 1.6rem; /* Reduced from 1.8rem for smaller heading */
     white-space: normal;
-    margin-bottom: 1.2rem; 
-    letter-spacing: 0.03em; 
+    margin-bottom: 1.2rem; /* Slightly increased spacing below heading */
+    letter-spacing: 0.03em; /* Added slight letter spacing for elegance */
   }
 
   .hero-content p {
-    font-size: 0.8rem; 
-    margin-bottom: 1.8rem; 
-    line-height: 1.6;
-    max-width: 90%; 
+    font-size: 0.8rem; /* Reduced from 0.85rem for smaller paragraph */
+    margin-bottom: 1.8rem; /* Increased spacing below paragraph */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 90%; /* Added max-width to center the text better */
     margin-left: auto;
     margin-right: auto;
   }
 
   .hero-content .btn {
-    padding: 10px 24px; 
+    padding: 10px 24px; /* Slightly increased padding for better button proportions */
     font-size: 0.7rem;
-    margin-top: 0.5rem; 
+    margin-top: 0.5rem; /* Added small top margin for spacing */
   }
 
   /* Mobile Collections */
@@ -1088,12 +1083,22 @@ footer {
     gap: 1.5rem;
   }
 
+  .ethos-value {
+    padding: 1.2rem 1.8rem;
+    max-width: 92%;
+    aspect-ratio: 1 / 0.6; /* Make it more horizontal/square than vertical */
+    margin: 0 auto;
+  }
+
   .ethos-value h3 {
     font-size: 0.95rem;
+    margin-bottom: 0.4rem; /* Reduced space between heading and paragraph */
   }
 
   .ethos-value p {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Made paragraph text smaller */
+    line-height: 1.5;
+    margin-bottom: 0;
   }
 
   /* Mobile Bestselling */
@@ -1205,20 +1210,394 @@ footer {
   }
 }
 
+/* Further refinements for very small screens */
 @media (max-width: 576px) {
+  /* Improved Mobile Ethos Section */
+  .ethos {
+    padding: 2.8rem 0;
+  }
+
+  .ethos-values {
+    gap: 1.2rem;
+    padding: 0 0.8rem;
+  }
+
+  .ethos-value {
+    padding: 1.1rem 1.6rem;
+    border-radius: 8px;
+    max-width: 94%;
+    aspect-ratio: 1 / 0.55; /* Even more horizontal for smallest screens */
+  }
+
+  .ethos-value h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .ethos-value p {
+    font-size: 0.7rem; /* Even smaller text for smallest screens */
+    line-height: 1.4;
+  }
+
+  /* Further refinements for very small screens */
   .hero-content {
-    padding: 3rem 1.2rem; 
+    padding: 3rem 1.2rem; /* Further increased vertical padding for more space */
   }
 
   .hero-content h1 {
-    font-size: 1.5rem; 
-    margin-bottom: 1.3rem; 
+    font-size: 1.5rem; /* Further reduced for very small screens */
+    margin-bottom: 1.3rem; /* Increased spacing below heading */
   }
 
   .hero-content p {
-    font-size: 0.75rem; 
+    font-size: 0.75rem; /* Further reduced for very small screens */
     line-height: 1.5;
-    margin-bottom: 2rem; 
-    max-width: 85%; 
+    margin-bottom: 2rem; /* Increased spacing below paragraph */
+    max-width: 85%; /* Slightly reduced max-width for better proportions */
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-content {
+    order: 1;
+    padding: var(--spacing-lg);
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    min-height: 50vh;
+    order: 2;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .sustainability {
+    grid-template-columns: 1fr;
+  }
+
+  .sustainability-image {
+    min-height: 50vh;
+    order: 2;
+  }
+
+  .sustainability-content {
+    order: 1;
+    padding: var(--spacing-lg);
+    align-items: center;
+    text-align: center;
+  }
+
+  .sustainability-content h2 {
+    text-align: center;
+  }
+
+  .sustainability-content .btn {
+    align-self: center;
+  }
+
+  .ethos-values {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Header */
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .logo a {
+    font-size: 1rem;
+  }
+
+  .logo a span {
+    font-size: 0.5rem;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .header-action {
+    margin-left: 0;
+  }
+
+  /* Mobile Hero */
+  .hero-content {
+    padding: 2.5rem 1.5rem; /* Increased padding for more elegant spacing */
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem; /* Reduced from 1.8rem for smaller heading */
+    white-space: normal;
+    margin-bottom: 1.2rem; /* Slightly increased spacing below heading */
+    letter-spacing: 0.03em; /* Added slight letter spacing for elegance */
+  }
+
+  .hero-content p {
+    font-size: 0.8rem; /* Reduced from 0.85rem for smaller paragraph */
+    margin-bottom: 1.8rem; /* Increased spacing below paragraph */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 90%; /* Added max-width to center the text better */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content .btn {
+    padding: 10px 24px; /* Slightly increased padding for better button proportions */
+    font-size: 0.7rem;
+    margin-top: 0.5rem; /* Added small top margin for spacing */
+  }
+
+  /* Mobile Collections */
+  .collections {
+    padding: 2.5rem 0;
+  }
+
+  .collections h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .collection-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .collection-info p {
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Ethos */
+  .ethos {
+    padding: 2.5rem 0;
+  }
+
+  .ethos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ethos-intro {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .ethos-values {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ethos-value {
+    padding: 1.2rem 1.8rem;
+    max-width: 92%;
+    aspect-ratio: 1 / 0.6; /* Make it more horizontal/square than vertical */
+    margin: 0 auto;
+  }
+
+  .ethos-value h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem; /* Reduced space between heading and paragraph */
+  }
+
+  .ethos-value p {
+    font-size: 0.75rem; /* Made paragraph text smaller */
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* Mobile Bestselling */
+  .bestselling {
+    padding: 2.5rem 0;
+  }
+
+  .bestselling h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .product-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .product-price {
+    font-size: 0.75rem;
+  }
+
+  .view-all {
+    margin-top: 1.5rem;
+  }
+
+  .view-all .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Sustainability */
+  .sustainability-content {
+    padding: 2rem 1rem;
+  }
+
+  .sustainability-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sustainability-content p {
+    font-size: 0.8rem;
+  }
+
+  .sustainability-content .btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Newsletter */
+  .newsletter {
+    padding: 2.5rem 0;
+  }
+
+  .newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    margin-bottom: 0.75rem;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Footer */
+  footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-column h3 {
+    font-size: 0.8rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Further refinements for very small screens */
+@media (max-width: 576px) {
+  /* Improved Mobile Ethos Section */
+  .ethos {
+    padding: 2.8rem 0;
+  }
+
+  .ethos-values {
+    gap: 1.2rem;
+    padding: 0 0.8rem;
+  }
+
+  .ethos-value {
+    padding: 1.1rem 1.6rem;
+    border-radius: 8px;
+    max-width: 94%;
+    aspect-ratio: 1 / 0.55; /* Even more horizontal for smallest screens */
+  }
+
+  .ethos-value h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .ethos-value p {
+    font-size: 0.7rem; /* Even smaller text for smallest screens */
+    line-height: 1.4;
+  }
+
+  /* Further refinements for very small screens */
+  .hero-content {
+    padding: 3rem 1.2rem; /* Further increased vertical padding for more space */
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; /* Further reduced for very small screens */
+    margin-bottom: 1.3rem; /* Increased spacing below heading */
+  }
+
+  .hero-content p {
+    font-size: 0.75rem; /* Further reduced for very small screens */
+    line-height: 1.5;
+    margin-bottom: 2rem; /* Increased spacing below paragraph */
+    max-width: 85%; /* Slightly reduced max-width for better proportions */
   }
 }
