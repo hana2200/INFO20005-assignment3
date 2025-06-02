@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to remove item from cart
   function removeCartItem(index) {
     // Get cart from localStorage
-    const cart = JSON.parse(localStorage.getItem("teaShopCart")) || []
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
   
     if (index >= 0 && index < cart.length) {
       // Remove item from cart
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Update cart count in header
   function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem("teaShopCart")) || []
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
   
     // Update cart count in header if element exists
@@ -239,5 +239,4 @@ document.addEventListener("DOMContentLoaded", () => {
       cartCountElement.textContent = cartCount
     }
   }
-  
   

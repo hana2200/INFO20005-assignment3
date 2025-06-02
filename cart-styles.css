@@ -1,3 +1,4 @@
+/* Cart-specific styles */
 
 /* Cart Page */
 .cart-page {
@@ -301,6 +302,7 @@
       display: none;
     }
   
+    /* Completely redesigned mobile cart layout */
     .cart-item {
       display: flex;
       flex-direction: column;

@@ -1229,7 +1229,7 @@ footer {
     padding: 1.1rem 1.6rem;
     border-radius: 8px;
     max-width: 94%;
-    aspect-ratio: 1 / 0.55; 
+    aspect-ratio: 1 / 0.55; /* Even more horizontal for smallest screens */
   }
 
   .ethos-value h3 {
@@ -1238,7 +1238,7 @@ footer {
   }
 
   .ethos-value p {
-    font-size: 0.7rem; 
+    font-size: 0.7rem; /* Even smaller text for smallest screens */
     line-height: 1.4;
   }
 
