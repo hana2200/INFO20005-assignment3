@@ -1,4 +1,3 @@
-/* Cart-specific styles */
 
 /* Cart Page */
 .cart-page {
@@ -302,7 +301,6 @@
       display: none;
     }
   
-    /* Completely redesigned mobile cart layout */
     .cart-item {
       display: flex;
       flex-direction: column;
@@ -352,9 +350,9 @@
     /* Improved remove button placement */
     .remove-item {
       position: absolute;
-      top: 0;
+      top: 50%;
       right: 0;
-      transform: none;
+      transform: translateY(-50%);
       font-size: 0.9rem;
       color: #777;
       background: none;
