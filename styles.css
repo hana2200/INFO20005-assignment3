@@ -413,14 +413,14 @@ header {
   font-weight: 300;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #5d6e5a;
+  color: #4a5a48;
 }
 
 .ethos-value p {
   font-size: 0.9rem;
   text-align: center;
   line-height: 1.8;
-  color: rgba(85, 85, 85, 0.8);
+  color: rgba(85, 85, 85, 0.9);
   font-weight: 300;
 }
 
